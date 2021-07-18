@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello word</h1>
+    <!-- al suo interno possiamo scrivere in codice php -->
+    @php    
+        $name = 'Valerio';
+        $surname = 'Matranga';
+        $colori = ['verde','rosso','giallo','arancio','blu'];
+    @endphp
+
+    <h1>Hello Word {{$name}} {{$surname}}</h1>
+    <h3>Lista Colori:</h3>
+    @foreach ($colori as $colore)
+        <ul>
+            <li>{{$colore}}</li>
+        </ul>
+    @endforeach
 </body>
 </html>
